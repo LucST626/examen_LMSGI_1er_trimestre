@@ -8,11 +8,14 @@
     font-family: monospace;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Playfair Display', serif;
 }
 
 section{
@@ -33,6 +36,10 @@ section{
 
 #pagina2{
     background: green;
+}
+#pagina2 h3{
+    font-style: italic;
+
 }
 
 #pagina3{
