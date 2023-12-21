@@ -2,22 +2,91 @@
 
 1º de DAM en ESCAV Granada
 
-Nombre:
+Nombre: Lucas Alejandro Sudre Telechea
 
-Fecha:
+Fecha: 21/12/2023
 
-## Inicio
+La página está compuesta por tres zonas individuales que ocupan toda la pantalla cada una, la primera tiene un texto centrado horizontal y verticalmente de "hola mundo"; donde he usado HTML y CSS;
+HTML
+<section id="pagina1" class="flex-center">
+        <h1>Hola Mundo</h1>
+</section>    
+CSS
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-Para empezar, crea un fork de este repositorio, clónalo en tu ordenador y abre el proyecto con VSCode.
+#pagina1{
+    background: rgb(255, 0, 0);
+}
+ la segunda tiene un texto inicial, una imagen y un pie de página; donde tambien he usado HTML y CSS;
+ HTML
+ <section id="pagina2" class="flex-center">
+        <h2>Sleepy Cat</h2>
+        <br>
+        <img src="https://img.freepik.com/foto-gratis/gatito-duerme-sus-patas-al-lado-su-cabeza_181624-54313.jpg?size=626&ext=jpg&ga=GA1.1.1016474677.1696809600&semt=ais
+        " alt=" Go two mimir teacher, you have worked enought">
+        <h3> Go two mimir teacher, you have worked enought</h3>
+</section>
+CSS
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-Edita este fichero README.md con tu nombre y la fecha de hoy, una vez hagas un commit inicial, estas listo para empezar!
+#pagina2{
+    background: green;
+}
+  y la tercera tiene un texto y un botón, el cual una vez presionado modifica tanto el texto como el color,¡¡¡¡Pruebalo!!!;
+  HTML
+  <section id="pagina3" class="flex-center">
+        <p id="texto">Pulsa el botón</p>
+        <button onclick="pulsarBoton()">Click</button>
+ </section>
+    CSS
+.flex-center{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
 
-El examen está dividido en 3 partes, cada una de ellas en una carpeta diferente:
+#pagina3{
+    background: blue;
+}
+JS
+let texto = 1;
 
-- `00_teoria`: Varias preguntas de teoría.
-- `01_practica`: Ejercicio con html+js.
-- `02_docs`: Documentación del ejercicio realizado.
 
-Es importante que realizes primero la parte de teoría, aunque las partes de práctica y documentación se pueden realizar como quieras.
+function pulsarBoton() {
 
-Cada directorio tiene instrucciones en su interior, léelas con atención, y si tienes alguna duda, preguntame!
+    console.log(texto);
+
+    if (texto === 1) {
+        document.querySelector("#texto").innerHTML = "Has pulsado el botón";
+        texto++;
+    } else if (texto === 2) {
+        document.querySelector("#texto").innerHTML = "Has vuelto a pulsar el botón!!";
+        texto++;
+    } else if (texto === 3) {
+        document.querySelector("#pagina3").style.background = "black";
+        document.querySelector("#texto").style.color = "white"
+        texto++;
+    } else if (texto === 4) {
+        document.querySelector("#texto").innerHTML = "Pulsa botón"; 
+        texto--;   
+        texto--;   
+        texto--;   
+        document.querySelector("#pagina3").style.background = "blue";
+        document.querySelector("#texto").style.color = "black"
+
+    }
+}
+
+
+Pruebalo [Aquí](https://codepen.io/LucST626/pen/eYXOqKR)
